@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import Header from './components/Header_footer/Header'
 import Footer from './components/Header_footer/Footer'
 import Hero from './components/hero'
@@ -11,9 +11,11 @@ import Shipping from './components/Shipping'
 import HelpCenter from './components/HelpCenter'
 import CookiePolicy from './components/CookiePolicy'
 import Internship from './components/Internship'
+import SectionLoader from './components/SectionLoader'
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('home');
+  const [isLoading, setIsLoading] = useState(true);
   const [theme, setTheme] = useState(() => {
     if (typeof window === 'undefined') return 'dark';
     return window.localStorage.getItem('theme') || 'dark';
@@ -37,6 +39,18 @@ const App = () => {
   const toggleTheme = () => {
     setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
   };
+
+  // Trigger loader on page change
+  const handlePageChange = useCallback((page) => {
+    if (page !== currentPage) {
+      setIsLoading(true);
+      setCurrentPage(page);
+    }
+  }, [currentPage]);
+
+  const handleLoadingComplete = useCallback(() => {
+    setIsLoading(false);
+  }, []);
 
   const renderCurrentPage = () => {
     switch (currentPage) {
@@ -70,11 +84,14 @@ const App = () => {
       {/* Header Navigation - Always Visible */}
       <Header
         currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
+        setCurrentPage={handlePageChange}
         theme={theme}
         toggleTheme={toggleTheme}
       />
       
+      {/* Section Loading Animation */}
+      {isLoading && <SectionLoader onComplete={handleLoadingComplete} />}
+
       {/* Main Content Area - Changes based on navigation */}
       <main className="flex-1">
         {renderCurrentPage()}
