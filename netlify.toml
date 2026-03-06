@@ -2,6 +2,9 @@
   command = "npm run build"
   publish = "dist"
 
+[build.environment]
+  NODE_VERSION = "20"
+
 # Ensure client-side routing works for the Vite SPA
 [[redirects]]
   from = "/*"
