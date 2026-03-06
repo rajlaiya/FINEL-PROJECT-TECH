@@ -67,12 +67,12 @@ const Footer = ({ setCurrentPage }) => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Quick Links</h4>
+            <h4 className="text-lg font-bold text-gray-900 dark:text-white">Quick Links</h4>
             <ul className="space-y-2">
               <li>
                 <button 
                   onClick={() => handleNavigation('home')} 
-                  className="text-gray-300 hover:text-white transition-colors text-sm text-left"
+                  className="text-gray-800 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-semibold text-left"
                 >
                   Home
                 </button>
@@ -80,7 +80,7 @@ const Footer = ({ setCurrentPage }) => {
               <li>
                 <button 
                   onClick={() => handleNavigation('projects')} 
-                  className="text-gray-300 hover:text-white transition-colors text-sm text-left"
+                  className="text-gray-800 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-semibold text-left"
                 >
                   Projects
                 </button>
@@ -88,7 +88,7 @@ const Footer = ({ setCurrentPage }) => {
               <li>
                 <button 
                   onClick={() => handleNavigation('services')} 
-                  className="text-gray-300 hover:text-white transition-colors text-sm text-left"
+                  className="text-gray-800 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-semibold text-left"
                 >
                   Services
                 </button>
@@ -96,7 +96,7 @@ const Footer = ({ setCurrentPage }) => {
               <li>
                 <button 
                   onClick={() => handleNavigation('about')} 
-                  className="text-gray-300 hover:text-white transition-colors text-sm text-left"
+                  className="text-gray-800 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-semibold text-left"
                 >
                   About Us
                 </button>
@@ -104,7 +104,7 @@ const Footer = ({ setCurrentPage }) => {
               <li>
                 <button 
                   onClick={() => handleNavigation('contact')} 
-                  className="text-gray-300 hover:text-white transition-colors text-sm text-left"
+                  className="text-gray-800 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-semibold text-left"
                 >
                   Contact
                 </button>
@@ -114,22 +114,22 @@ const Footer = ({ setCurrentPage }) => {
 
           {/* Customer Service */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Customer Service</h4>
+            <h4 className="text-lg font-bold text-gray-900 dark:text-white">Customer Service</h4>
             <ul className="space-y-2">
               <li>
                 <button 
                   onClick={() => handleNavigation('help-center')} 
-                  className="text-gray-300 hover:text-white transition-colors text-sm text-left"
+                  className="text-gray-800 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-semibold text-left"
                 >
                   Help Center
                 </button>
               </li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">Track Your Order</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors text-sm">Returns & Exchanges</a></li>
+              <li><a href="#" className="text-gray-800 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-semibold">Track Your Order</a></li>
+              <li><a href="#" className="text-gray-800 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-semibold">Returns & Exchanges</a></li>
               <li>
                 <button 
                   onClick={() => handleNavigation('shipping')} 
-                  className="text-gray-300 hover:text-white transition-colors text-sm text-left"
+                  className="text-gray-800 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-semibold text-left"
                 >
                   Shipping Info
                 </button>
@@ -137,7 +137,7 @@ const Footer = ({ setCurrentPage }) => {
               <li>
                 <button 
                   onClick={() => handleNavigation('internship')} 
-                  className="text-gray-300 hover:text-white transition-colors text-sm text-left"
+                  className="text-gray-800 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-semibold text-left"
                 >
                   Internships
                 </button>
@@ -147,15 +147,15 @@ const Footer = ({ setCurrentPage }) => {
 
           {/* Newsletter */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Stay Updated</h4>
-            <p className="text-gray-300 text-sm">
+            <h4 className="text-lg font-bold text-gray-900 dark:text-white">Stay Updated</h4>
+            <p className="text-gray-800 dark:text-gray-300 text-sm font-medium">
               Subscribe to our newsletter for the latest updates and exclusive offers.
             </p>
             <div className="flex flex-col space-y-2">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="px-3 py-2 bg-gray-800 text-white placeholder-gray-400 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                className="px-3 py-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
               />
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-colors text-sm font-medium">
                 Subscribe
@@ -165,10 +165,10 @@ const Footer = ({ setCurrentPage }) => {
         </div>
 
         {/* Payment Methods */}
-        <div className="border-t border-gray-800 pt-8 mt-8">
+        <div className="border-t border-gray-300 dark:border-gray-800 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
-              <h5 className="text-sm font-semibold text-white mb-2">We Accept</h5>
+              <h5 className="text-sm font-bold text-gray-900 dark:text-white mb-2">We Accept</h5>
               <div className="flex space-x-4 justify-center md:justify-start">
                 <div className="bg-white rounded p-1">
                   <span className="text-xs font-bold text-blue-600">VISA</span>
@@ -186,13 +186,13 @@ const Footer = ({ setCurrentPage }) => {
             </div>
 
             <div className="text-center md:text-right">
-              <div className="flex items-center space-x-2 text-sm text-gray-300">
+              <div className="flex items-center space-x-2 text-sm text-gray-800 dark:text-gray-300 font-semibold">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
                 <span>Secure Shopping</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm text-gray-300 mt-1">
+              <div className="flex items-center space-x-2 text-sm text-gray-800 dark:text-gray-300 font-semibold mt-1">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
@@ -203,17 +203,17 @@ const Footer = ({ setCurrentPage }) => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 pt-6 mt-6">
+        <div className="border-t border-gray-300 dark:border-gray-800 pt-6 mt-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-400 text-sm text-center md:text-left">
+            <p className="text-gray-700 dark:text-gray-400 text-sm font-semibold text-center md:text-left">
               © 2025 finel-project. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+              <a href="#" className="text-gray-700 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors font-semibold">Privacy Policy</a>
+              <a href="#" className="text-gray-700 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors font-semibold">Terms of Service</a>
               <button 
                 onClick={() => handleNavigation('cookie-policy')} 
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-700 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors font-semibold"
               >
                 Cookie Policy
               </button>
