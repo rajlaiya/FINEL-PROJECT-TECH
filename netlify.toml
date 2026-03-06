@@ -1,9 +1,10 @@
 [build]
-  command = "npm run build"
+  command = "npm ci && npx vite build"
   publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20"
+  NPM_FLAGS = "--legacy-peer-deps"
 
 # Ensure client-side routing works for the Vite SPA
 [[redirects]]
